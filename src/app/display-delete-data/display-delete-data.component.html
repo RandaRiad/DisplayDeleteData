@@ -1,0 +1,31 @@
+
+
+<h4>Display Data From JSON file</h4>
+<p></p>
+<table class="table table-striped" >
+<thead>
+        <tr>
+         
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+        <tbody *ngFor='let item of users'>
+    <tr>
+      <td>{{item.firstName}}</td>
+      <td>{{item.lastName}}</td>
+      <td>{{item.email}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+
+</p>
+<P></P><p></p>
+<h4>Delete Data of the table please enter firstname:</h4>
+<span (click)="DeleteUser(firstName)">
+   <input [(ngModel)]="firstName" type="text"name="firstName" >
+
+  <button type="button" class="btn btn-danger">delete</button></span>
